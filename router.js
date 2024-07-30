@@ -1,7 +1,9 @@
 const express = require("express");
 const Resume = require("./resumeSchema");
 const router = express.Router();
-
+router.get("/", (req, res) => {
+  res.send("Welcome to the Resume Builder API");
+});
 router.post("/user-resumes", async (req, res) => {
   try {
     console.log(req.body);
